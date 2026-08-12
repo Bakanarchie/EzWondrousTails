@@ -1,0 +1,26 @@
+[
+  {
+    "Author": "daemitus, MidoriKami x Bakanarchie",
+    "Name": "ezWondrousTails",
+    "InternalName": "WondrousTailsSolver",
+    "AssemblyVersion": "3.2.2.7",
+    "Description": "This plugin prints the probability of getting a row in Wondrous Tails to the in-game display along with the average probability of what would happen if you shuffled.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Bakanarchie/EzWondrousTails",
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "IconUrl": "https://raw.githubusercontent.com/Bakanarchie/EzWondrousTails/master/res/icon.png",
+    "Punchline": "Adds row probabilities to the Wondrous Tails display.",
+    "AcceptsFeedback": true,
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "DownloadCount": 0,
+    "LastUpdate": "1786555823",
+    "DownloadLinkInstall": "https://github.com/Bakanarchie/EzWondrousTails/raw/master/latest.zip",
+    "DownloadLinkTesting": "https://github.com/Bakanarchie/EzWondrousTails/raw/master/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/Bakanarchie/EzWondrousTails/raw/master/latest.zip"
+  }
+]

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Numerics;
 using Dalamud.Game.Text.SeStringHandling;
 using Dalamud.Plugin;
@@ -7,23 +8,32 @@ using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using KamiToolKit;
 using KamiToolKit.Classes;
-using KamiToolKit.Classes.Controllers;
+using KamiToolKit.Controllers;
+using KamiToolKit.Enums;
 using KamiToolKit.Extensions;
 using KamiToolKit.Nodes;
 
 namespace WondrousTailsSolver;
 
-public unsafe class AddonWeeklyBingoController : AddonController<AddonWeeklyBingo> {
+public unsafe class AddonWeeklyBingoController : IDisposable {
+    private readonly AddonController<AddonWeeklyBingo> controller;
     private TextNode? probabilityTextNode;
 
-    public AddonWeeklyBingoController(IDalamudPluginInterface pluginInterface) : base("WeeklyBingo") {
+    public AddonWeeklyBingoController(IDalamudPluginInterface pluginInterface) {
         KamiToolKitLibrary.Initialize(pluginInterface);
-        OnAttach += AttachNodes;
-        OnRefresh += AddonRefresh;
-        OnUpdate += AddonRefresh;
-        OnDetach += DetachNodes;
-        Enable();
+
+        controller = new AddonController<AddonWeeklyBingo> {
+            AddonName = "WeeklyBingo",
+            OnSetup = AttachNodes,
+            OnRefresh = AddonRefresh,
+            OnUpdate = AddonRefresh,
+            OnFinalize = DetachNodes,
+        };
+        controller.Enable();
     }
+
+    public void Dispose()
+        => controller.Dispose();
 
     private void AttachNodes(AddonWeeklyBingo* addon) {
         var existingTextNode = addon->GetTextNodeById(34);
