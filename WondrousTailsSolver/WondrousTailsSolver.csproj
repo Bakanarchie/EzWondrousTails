@@ -2,7 +2,7 @@
   <PropertyGroup>
     <AssemblyName>EzWondrousTailsBakanarchie</AssemblyName>
     <PackageId>WondrousTailsSolver</PackageId>
-    <Version>3.2.2.7</Version>
+    <Version>3.2.2.8</Version>
     <Authors>daemitus,MidoriKami</Authors>
     <PackageProjectUrl>https://github.com/Bakanarchie/EzWondrousTails</PackageProjectUrl>
 	  <NoWarn>$(NoWarn);MSB3277</NoWarn>
