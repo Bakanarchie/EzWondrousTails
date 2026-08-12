@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Dalamud.NET.Sdk/15.0.0">
   <PropertyGroup>
+    <AssemblyName>EzWondrousTailsBakanarchie</AssemblyName>
     <PackageId>WondrousTailsSolver</PackageId>
     <Version>3.2.2.7</Version>
     <Authors>daemitus,MidoriKami</Authors>
-    <PackageProjectUrl>https://github.com/MidoriKami/EzWondrousTails</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Bakanarchie/EzWondrousTails</PackageProjectUrl>
 	  <NoWarn>$(NoWarn);MSB3277</NoWarn>
   </PropertyGroup>
 
